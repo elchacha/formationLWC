@@ -1,0 +1,8 @@
+Lien vers l'utilisation des plateformes event (aucun rapport direct avec les lwc)
+
+https://andyinthecloud.com/2020/04/02/apex-process-orchestration-and-monitoring-with-platform-events/amp/
+
+
+Lien vers l'utilisation de l'api streaming couplé avec les lightning message services :
+https://medium.com/@TheVishnuKumar/lightning-web-component-and-streaming-api-54d61829250
+https://github.com/TheVishnuKumar/lwc-streaming-api (ce git contient les composants nécessaires pour pouvoir exploiter la streaming api via les lwc) 

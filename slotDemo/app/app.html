@@ -1,0 +1,41 @@
+  <template>
+    <div class="app">
+      <lightning-button label="push to slot1" onclick={pushToSlot1}></lightning-button>
+      <lightning-button label="push to slot2" onclick={pushToSlot2}></lightning-button>
+      <lightning-button label="push to slot" onclick={pushToSlot}></lightning-button>
+      <lightning-button label="hide slot" onclick={hideSlot}></lightning-button>
+
+              <br><br>
+              debut de l'élement child :
+              <br><br>
+
+
+          <c-child>
+            <template if:true={slot1}>
+              <span  slot="slot1">
+                <lightning-button 
+                  label="Go to record" 
+                onclick={onGoToRecord}></lightning-button>
+              </span>
+            </template>
+            <template if:true={slot2}>
+              <span  slot="slot2">
+                <lightning-button 
+                  label="Go to record" 
+                onclick={onGoToRecord}></lightning-button>
+              </span>
+            </template>
+            <template if:true={slot}>
+                <lightning-button 
+                  label="Go to record" 
+                onclick={onGoToRecord}></lightning-button>
+            </template>
+            <template if:true={noslot}>
+                <lightning-button 
+                  label="Go to record" 
+                onclick={onGoToRecord}></lightning-button>
+            </template>
+        </c-child> 
+
+    </div>
+  </template>
