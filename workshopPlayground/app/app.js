@@ -5,14 +5,14 @@ export default class App extends LightningElement {
     // ensemble des informations utilisés par mon template html.
     // WARNING : le track n'est pas obligatoire pour les 2 tableaux : POURQUOI ???
     // je préfère le mettre pour me rappeler qu'il s'agit de tableaux néanmoins
-    objecttype;
+    objecttype='Contact';
     @track labels;
     @track linesvalues;
 
     // pas besoin de track cet objet, il n'est pas utilisé par mon template html
     queryResult;
 
-    query;
+    query='select Email ,Name ,LastName ,CreatedDate  from Contact limit 5';
 
 
     connectedCallback(){
@@ -43,7 +43,7 @@ export default class App extends LightningElement {
                     // on ajoute le nom du champs et sa valeur (modifiée ou non)
                     objectToSave[input.dataset.fieldname]=input.value;
                 }
-                objectToSave["attributes"]={"type":"Contact"};
+                objectToSave["attributes"]={"type":this.objecttype};
             });
             // on ajoute l'objet à la liste
             listObjectsToSave.push(objectToSave);
@@ -62,6 +62,10 @@ export default class App extends LightningElement {
             else if(field!='RecordTypeId' && field!='Id')
                 this.labels.push(field);
         }
+    }
+
+    onChangeType(event){
+        this.objecttype=event.target.value;
     }
 
 
@@ -92,6 +96,11 @@ export default class App extends LightningElement {
     onChangeQuery(event){
         this.query=event.target.value;
         console.log(this.query);
+        console.log(this.query.indexOf(" from " + 5));
+		this.objecttype = this.query.substring(this.query.indexOf(" from " + 5));
+		console.log("substring " + this.query.substring(this.query.indexOf("from" + 5)));
+		this.objecttype = this.objecttype.substring(0, this.objecttype.indexOf(" "));
+		console.log(this.objecttype);
     }
 
     filters=[];
