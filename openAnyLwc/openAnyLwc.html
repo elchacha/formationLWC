@@ -1,0 +1,33 @@
+<template>
+
+    <lightning-card>
+
+        Example of how to test a formula with eval from Apex
+
+
+        <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+                <span><lightning-input label="Put the lwc name here" onchange={handleChange}></lightning-input></span>
+              </div>
+        </div>
+        <template for:each={params} for:item="param">
+            <div class="slds-grid slds-wrap" key={param.param}>
+                <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+                  <span><lightning-input name={param.param} label={param.param} data-param={param.param}></lightning-input></span>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+                  <span><lightning-input name={param.value} label={param.value} data-param={param.value}></lightning-input></span>
+                </div>
+          </div>
+        </template>
+
+        <br/><br/>
+        <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-large-size_6-of-12">
+            <lightning-button class="slds-align_absolute-center" label="open lwc with parameters" onclick={buildUrl}></lightning-button>
+          </div>
+        </div>
+
+    </lightning-card>
+    
+</template>
