@@ -1,0 +1,24 @@
+.blueButton{
+    --slds-c-button-brand-color-background: var(--c-dggn-blue-color);
+    --slds-c-button-outline-brand-color-background: var(--c-dggn-blue-color);
+    --slds-c-button-text-color-neutral: white;
+    --slds-c-button-brand-color-border : white;
+    --slds-c-button-brand-color-background-hover:var(--c-dggn-red-color);
+    --slds-c-button-brand-color-background-active :var(--c-dggn-red-color);
+}
+
+
+.orangeButton{
+    --slds-c-button-brand-color-background: orange;
+    --slds-c-button-outline-brand-color-background: orange;
+    --slds-c-button-brand-text-color: black;
+    --slds-c-button-brand-color-border : white;
+}
+
+.txt{
+    font-size: 30px;
+    font-weight: bold;
+    align-content: center;
+    padding-left: 20px;
+    color: var(--c-dggn-red-color);
+}

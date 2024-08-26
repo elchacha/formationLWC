@@ -1,0 +1,25 @@
+<template>
+    <div class="app">
+      <lightning-button variant="brand" label="push to slot1" onclick={pushToSlot1}></lightning-button>
+      <lightning-button variant="brand" class="blueButton" label="push to slot2" onclick={pushToSlot2}></lightning-button>
+      <lightning-button variant="brand" class="orangeButton" label="push to slot" onclick={pushToSlot}></lightning-button>
+      <button class="slds-button slds-button_brand blueButton" onclick={hideSlot}>hide slot</button>
+
+
+        <br><br>
+        <lightning-input style="width:400px" label="value to send to child" onchange={onChange}></lightning-input>
+
+        <br><br>
+        debut de l'élement child :
+        <br><br>
+
+        <c-child-slot lwc:ref="childSlot" value={valueForChild}>
+            <template if:true={displaySlotInfo}>
+                <span  slot={activeSlot}>
+                    <lightning-button label="click Me" onclick={onGoToRecord}></lightning-button>
+                    value : <span class="txt">{valueForChild}</span>
+            </span>
+            </template>
+        </c-child-slot> 
+    </div>
+  </template>

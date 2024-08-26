@@ -1,0 +1,4 @@
+<aura:tokens>
+	<aura:token name="dggn-blue-color" value="#000091"/>
+	<aura:token name="dggn-red-color" value="#ce0500"/>
+</aura:tokens>
