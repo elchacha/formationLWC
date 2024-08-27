@@ -16,4 +16,12 @@ export default class PropsDemo extends LightningElement {
         this.counter++;
         this.myTrackedIDs.push(this.counter);
     }
+
+    oneTime=true;
+    renderedCallback(){
+        if(!this.oneTime){
+            this.oneTime=false;
+            this.counter=counter++;
+        }
+    }
 }

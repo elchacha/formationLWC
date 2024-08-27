@@ -8,6 +8,7 @@ public class ProcessWrapper {
     public class ClassWrapperExample{
         @AuraEnabled
         public String value;
+        @AuraEnabled
         public Integer aInt;
         @AuraEnabled
 		public Map<String,String> aMap;
