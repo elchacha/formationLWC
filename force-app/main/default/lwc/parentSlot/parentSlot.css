@@ -1,1 +1,9 @@
 @import 'c/globalCss'
+
+.txt{
+    font-size: 30px;
+    font-weight: bold;
+    align-content: center;
+    padding-left: 20px;
+    color: var(--c-dggn-red-color);
+}
